@@ -1,0 +1,121 @@
+.main-footer {
+  padding-bottom: 96px;
+
+  text-align: center;
+
+  @media (max-width: $width-tablet-only) {
+    padding-bottom: 52px;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    position: relative;
+  }
+}
+
+.main-footer h2 {
+  margin: 0;
+  padding: 0;
+
+  color: $text-dark-color;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+
+  @media (max-width: $width-tablet-only) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    font-size: 18px;
+  }
+}
+
+.main-footer p {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0;
+  max-width: 555px;
+
+  color: $text-light-grey-color;
+  font-size: 17px;
+  line-height: 31px;
+
+  @media (max-width: $width-tablet-only) {
+    margin-top: 20px;
+    max-width: none;
+  }
+}
+
+.main-footer img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 41px;
+  width: 957px;
+  height: auto;
+
+  @media (max-width: $width-tablet-only) {
+    margin-top: 20px;
+    padding: 0 21px;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    position: relative;
+    left: -15px;
+
+    margin-top: 25px;
+    padding: 0;
+    width: 100vw;
+    max-width: none;
+  }
+}
+
+.main-footer__contacts-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 39px;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $width-tablet-only) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    flex-direction: column;
+    margin-top: 31px;
+  }
+}
+
+.main-footer__contact {
+  &:not(:first-child) {
+    margin-left: 90px;
+
+    @media (max-width: $width-mobile-only) {
+      margin: 0;
+      margin-top: 22px;
+    }
+  }
+}
+
+.main-footer__contact a {
+  color: $text-middle-grey-color;
+  font-size: 16px;
+  line-height: 32px;
+
+  @media (max-width: $width-tablet-only) {
+    line-height: 22px;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    line-height: 32px;
+  }
+}
+
+.main-footer__contact svg {
+  margin-right: 15px;
+
+  fill: none;
+}

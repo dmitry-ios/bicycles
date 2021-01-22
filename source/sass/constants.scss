@@ -1,3 +1,21 @@
 /* Fonts */
 
 $main-font-stack: "Open Sans", "Arial", sans-serif;
+
+/* Colors */
+
+$basic-black-color: #000000;
+$basic-cyan-color: #0ad9c6;
+$basic-white-color: #ffffff;
+
+$text-dark-color: #1f1f1f;
+$text-light-grey-color: rgba(0, 0, 0, 0.7);
+$text-middle-grey-color: rgba(0, 0, 0, 0.5);
+
+/* Layouts */
+
+$max-container-desktop: 1136px;
+
+$width-tablet-only: 1023px;
+$width-mobile-only: 767px;
+$width-mobile: 320px;
