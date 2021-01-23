@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,23 +7,61 @@
     <title>Велосипеды</title>
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
-    <header>
-      О нас
-      Виды велосипедов
-      Видео про велосипеды
-      Контакты
+
+  <body class="page__body">
+
+    <header class="main-header">
+      <div class="container">
+        <nav class="main-header__navigation">
+          <a class="logo" aria-label="Сайт магазина велосипедов Moon">
+            <svg width="69" height="22" viewBox="0 0 65 19" role="img">
+              <use xlink:href="img/sprite_auto.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="main-header__site-navigation site-navigation">
+            <li class="site-navigation__item">
+              <a href="#about">О нас</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#category">Виды велосипедов</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#video">Видео про велосипеды</a>
+            </li>
+            <li class="site-navigation__item">
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section>
-        Мы продаем велосипеды
-        Наш магазин отбирает только самые лучшие велосипеды для продажи
 
-        Заполните поля ниже и мы подберем велосипед Вашей мечты
-        Введите Ваше Имя
-        Введите Ваш номер телефона
-        Подобрать велосипед мечты
+    <main>
+      <section class="promo">
+        <div class="container">
+          <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
+          <div class="promo__inner">
+            <div class="promo__description">
+              <p class="promo__title">Мы продаем велосипеды</p>
+              <p class="promo__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+            </div>
+            <div class="promo_form form">
+              <p class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <p class="form__field">
+                  <label class="visually-hidden" for="username-field">Имя:</label>
+                  <input type="text" name="username" id="username-field" placeholder="Введите Ваше Имя" required>
+                </p>
+                <p class="form__field">
+                  <label class="visually-hidden" for="phone-field">Номер телефона:</label>
+                  <input type="tel" name="phone" id="phone-field" placeholder="Введите Ваш номер телефона" required>
+                </p>
+                <input type="submit" value="Подобрать велосипед мечты">
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

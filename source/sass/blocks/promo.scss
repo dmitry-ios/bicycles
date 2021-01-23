@@ -1,0 +1,42 @@
+.promo {
+  margin: 0 auto;
+  width: 880px;
+  min-height: 500px;
+
+  color: $basic-white-color;
+}
+
+.promo__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__title {
+  margin: 0;
+  margin-top: 46px;
+
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 64px;
+  letter-spacing: -0.005em;
+}
+
+.promo__text {
+  margin: 0;
+  margin-top: 24px;
+
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+
+  opacity: 0.8;
+}
+
+.promo_form {
+  width: 326px;
+}
+
+.promo__description {
+  width: 393px;
+}
