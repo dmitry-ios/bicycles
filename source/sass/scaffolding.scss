@@ -34,6 +34,7 @@ img {
 
 .container {
   margin: 0 auto;
+  padding: 0 10px;
   max-width: $max-container-desktop;
 
   @media (max-width: $width-tablet-only) {
