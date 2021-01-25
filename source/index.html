@@ -12,13 +12,13 @@
 
     <header class="main-header">
       <div class="container">
-        <nav class="main-header__navigation">
+        <nav class="main-header__navigation main-header__navigation--nojs">
           <a class="logo" aria-label="Сайт магазина велосипедов Moon">
             <svg width="69" height="22" viewBox="0 0 65 19" role="img">
               <use xlink:href="img/sprite_auto.svg#logo"></use>
             </svg>
           </a>
-          <ul class="main-header__site-navigation site-navigation">
+          <ul class="main-header__site-navigation site-navigation site-navigation--close">
             <li class="site-navigation__item">
               <a href="#about">О нас</a>
             </li>
@@ -32,6 +32,15 @@
               <a href="#contacts">Контакты</a>
             </li>
           </ul>
+          <button class="main-header__toggle main-header__toggle--open button" type="button">
+            <svg class="main-header__toggle-icon main-header__toggle-icon--open" width="30" height="30" viewBox="0 0 30 30" role="img">
+              <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
+            </svg>
+            <svg class="main-header__toggle-icon main-header__toggle-icon--close" width="50" height="52" viewBox="0 0 50 52" role="img">
+              <use xlink:href="img/sprite_auto.svg#icon-close-button"></use>
+            </svg>
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -57,7 +66,7 @@
                   <label class="visually-hidden" for="phone-field">Номер телефона:</label>
                   <input type="tel" name="phone" id="phone-field" placeholder="Введите Ваш номер телефона" required>
                 </p>
-                <input type="submit" value="Подобрать велосипед мечты">
+                <input class="button" type="submit" value="Подобрать велосипед мечты">
               </form>
             </div>
           </div>
@@ -88,7 +97,7 @@
 
     <footer class="main-footer">
       <div class="container">
-        <h2>Как нас найти?</h2>
+        <h2 id="contacts">Как нас найти?</h2>
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         <img src="img/map-desktop.png" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
         <ul class="main-footer__contacts-list">
@@ -111,5 +120,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

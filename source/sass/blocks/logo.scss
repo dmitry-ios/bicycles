@@ -1,12 +1,31 @@
 .logo {
   position: relative;
-
-  margin-left: 126px;
-  margin-top: 226px;
   order: 2;
+
+  margin-right: 883px;
+  margin-top: 226px;
+
+  @media (max-width: $width-tablet-only) {
+    position: static;
+    order: 0;
+
+    display: block;
+    margin: 0;
+    padding-top: 21px;
+    padding-left: 7px;
+  }
+
+  @media (max-width: $width-tablet-only) {
+    padding-left: 0;
+  }
 }
 
 .logo svg {
   position: relative;
   top: 21px;
+  left: 50%;
+
+  @media (max-width: $width-tablet-only) {
+    position: static;
+  }
 }

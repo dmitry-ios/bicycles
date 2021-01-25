@@ -18,4 +18,17 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+
+  @media (max-width: $width-tablet-only) {
+    height: 340px;
+
+    // background-image: url("../img/cover-tablet.jpg");
+    background-image: none;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    height: 390px;
+
+    // background-image: url("../img/cover-mobile.jpg");
+  }
 }
