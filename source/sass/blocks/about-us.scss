@@ -1,5 +1,5 @@
 .about-us {
-  padding-bottom: 100px;
+  padding-bottom: 122px;
 
   color: $basic-black-color;
   font-size: 22px;
@@ -11,6 +11,8 @@
   }
 
   @media (max-width: $width-mobile-only) {
+    padding-bottom: 85px;
+
     font-size: 18px;
     line-height: 35px;
   }
