@@ -1,9 +1,11 @@
 .main-footer {
+  padding-top: 151px;
   padding-bottom: 96px;
 
   text-align: center;
 
   @media (max-width: $width-tablet-only) {
+    padding-top: 70px;
     padding-bottom: 52px;
   }
 
