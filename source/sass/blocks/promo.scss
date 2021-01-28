@@ -10,6 +10,12 @@
   }
 }
 
+.promo .container {
+  @media (min-width: $width-tablet-only) {
+    padding: 0;
+  }
+}
+
 .promo__inner {
   display: flex;
   justify-content: space-between;
@@ -21,7 +27,7 @@
   }
 }
 
-.promo__title {
+.promo__description h2 {
   margin: 0;
   margin-top: 46px;
 
@@ -39,7 +45,7 @@
   }
 }
 
-.promo__text {
+.promo__description p {
   margin: 0;
   margin-top: 24px;
 
@@ -106,6 +112,10 @@
     background-position: top center;
     background-size: cover;
     background-image: url("../img/cover-tablet.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/cover-tablet@2x.jpg");
+    }
   }
 
   @media (max-width: $width-mobile-only) {
@@ -114,5 +124,9 @@
     height: 390px;
 
     background-image: url("../img/cover-mobile.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/cover-mobile@2x.jpg");
+    }
   }
 }

@@ -1,6 +1,6 @@
 .bicycles {
   padding-top: 149px;
-  padding-bottom: 149px;
+  padding-bottom: 117px;
 
   background-color: $basic-extra-light-color;
 
@@ -12,6 +12,10 @@
   @media (max-width: $width-mobile-only) {
     padding-bottom: 14px;
   }
+}
+
+.bicycles .container {
+  max-width: 1267px;
 }
 
 .bicycles h2 {
@@ -31,10 +35,11 @@
 }
 
 .bicycles__list {
-  margin: 0 -5px;
+  margin: 0;
   margin-top: 51px;
   padding: 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 
   list-style: none;
@@ -54,13 +59,7 @@
 }
 
 .bicycles__item {
-  margin-right: auto;
-  padding-right: 5px;
-
-  &:nth-child(3n) {
-    margin-right: 0;
-    padding-right: 0;
-  }
+  margin-bottom: 32px;
 
   @media (max-width: $width-tablet-only) {
     margin: 0;
@@ -73,12 +72,14 @@
   }
 }
 
-.bicycle__pic-wrapper {
+.bicycles__pic-wrapper {
   z-index: 2;
   position: relative;
 
   &--big-circle {
     padding-top: 10px;
+    padding-left: 46px;
+    padding-right: 31px;
 
     @media (max-width: $width-tablet-only) {
       padding: 0;
@@ -88,8 +89,8 @@
   &--big-circle::before {
     z-index: -1;
     position: absolute;
-    top: 50%;
-    left: -60px;
+    top: 46%;
+    left: -18px;
 
     content: "";
 
@@ -103,7 +104,7 @@
 
     @media (max-width: $width-tablet-only) {
       top: auto;
-      bottom: -20px;
+      bottom: 25px;
       left: -37px;
 
       margin: 0;
@@ -114,13 +115,15 @@
     }
 
     @media (max-width: $width-mobile-only) {
-      bottom: -19px;
+      bottom: 27px;
       left: -24px;
     }
   }
 
   &--two-small-squares {
     padding-top: 39px;
+    padding-left: 19px;
+    padding-right: 51px;
 
     @media (max-width: $width-tablet-only) {
       padding: 0;
@@ -146,18 +149,26 @@
 
   &--two-small-squares::before {
     top: 21px;
-    left: -19px;
+    left: 0;
   }
 
   &--two-small-squares::after {
-    right: -23px;
-    bottom: -15px;
+    right: 29px;
+    bottom: 31px;
+  }
+
+  &--middle-circle {
+    padding-right: 36px;
+
+    @media (max-width: $width-tablet-only) {
+      padding: 0;
+    }
   }
 
   &--middle-circle::after {
     position: absolute;
     top: -32px;
-    right: -36px;
+    right: 0;
 
     content: "";
 
@@ -199,7 +210,8 @@
   }
 }
 
-.bicycles__title {
+.bicycles h3 {
+  margin: 0;
   padding-top: 12px;
 
   color: $basic-black-color;

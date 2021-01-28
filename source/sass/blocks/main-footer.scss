@@ -1,8 +1,10 @@
 .main-footer {
-  padding-top: 151px;
+  padding-top: 152px;
   padding-bottom: 96px;
 
   text-align: center;
+
+  overflow-x: hidden;
 
   @media (max-width: $width-tablet-only) {
     padding-top: 70px;
@@ -17,6 +19,7 @@
 .main-footer h2 {
   margin: 0;
   padding: 0;
+  padding-right: 11px;
 
   color: $text-dark-color;
   font-size: 30px;
@@ -25,6 +28,8 @@
   letter-spacing: -0.005em;
 
   @media (max-width: $width-tablet-only) {
+    padding: 0;
+
     font-size: 24px;
   }
 
@@ -37,6 +42,7 @@
   margin: 0 auto;
   margin-top: 30px;
   padding: 0;
+  padding-right: 16px;
   max-width: 555px;
 
   color: $text-light-grey-color;
@@ -45,59 +51,70 @@
 
   @media (max-width: $width-tablet-only) {
     margin-top: 20px;
+    padding: 0;
     max-width: none;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    padding: 0 10px;
   }
 }
 
 .main-footer img {
   display: block;
   margin: 0 auto;
-  margin-top: 41px;
+  margin-top: 39px;
   width: 957px;
   height: auto;
 
   @media (max-width: $width-tablet-only) {
     margin-top: 20px;
-    padding: 0 21px;
+    width: 698px;
+    height: 545px;
   }
 
   @media (max-width: $width-mobile-only) {
     position: relative;
     left: -15px;
 
-    margin-top: 25px;
+    margin-top: 19px;
     padding: 0;
     width: 100vw;
+    height: 250px;
     max-width: none;
+
+    object-fit: cover;
   }
 }
 
 .main-footer__contacts-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0;
-  margin-top: 39px;
+  margin-top: 30px;
   padding: 0;
 
   list-style: none;
 
   @media (max-width: $width-tablet-only) {
-    margin-top: 20px;
+    margin-top: 11px;
   }
 
   @media (max-width: $width-mobile-only) {
     flex-direction: column;
-    margin-top: 31px;
+    margin-top: 21px;
   }
 }
 
 .main-footer__contact {
   &:not(:first-child) {
-    margin-left: 90px;
+    margin-left: 95px;
+    margin-right: 21px;
 
     @media (max-width: $width-mobile-only) {
       margin: 0;
-      margin-top: 22px;
+      margin-top: 10px;
     }
   }
 }
@@ -117,7 +134,10 @@
 }
 
 .main-footer__contact svg {
-  margin-right: 15px;
+  position: relative;
+  top: 7px;
+
+  margin-right: 7px;
 
   fill: none;
 }

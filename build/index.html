@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Первоклассный магазин с лучшими велосипедами на любой выбор по всей России">
     <title>Велосипеды</title>
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
@@ -12,18 +17,20 @@
 
     <header class="main-header">
       <div class="container">
+        <!-- Класс main-header__navigation&ndash;&ndash;nojs удаляется, если JavaScript работает -->
         <nav class="main-header__navigation main-header__navigation--nojs">
           <a class="logo" aria-label="Сайт магазина велосипедов Moon">
             <svg width="69" height="22" viewBox="0 0 65 19" role="img">
               <use xlink:href="img/sprite_auto.svg#logo"></use>
             </svg>
           </a>
+          <!-- Класс site-navigation&ndash;&ndash;close ставится, если меню закрыто или закрывается -->
           <ul class="main-header__site-navigation site-navigation site-navigation--close">
             <li class="site-navigation__item">
               <a href="#about">О нас</a>
             </li>
             <li class="site-navigation__item">
-              <a href="#category">Виды велосипедов</a>
+              <a href="#bicycles">Виды велосипедов</a>
             </li>
             <li class="site-navigation__item">
               <a href="#video">Видео про велосипеды</a>
@@ -32,6 +39,9 @@
               <a href="#contacts">Контакты</a>
             </li>
           </ul>
+          <!-- У кнопки переключения меню класс main-header__toggle&ndash;&ndash;open ставится,
+            когда состояние – открыто,
+            а удаляется, когда – закрыто. -->
           <button class="main-header__toggle main-header__toggle--open button" type="button">
             <svg class="main-header__toggle-icon main-header__toggle-icon--open" width="30" height="30" viewBox="0 0 30 30" role="img">
               <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
@@ -52,8 +62,8 @@
           <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
           <div class="promo__inner">
             <div class="promo__description">
-              <p class="promo__title">Мы продаем велосипеды</p>
-              <p class="promo__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+              <h2>Мы продаем велосипеды</h2>
+              <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
             </div>
             <div class="promo_form form">
               <p class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
@@ -87,30 +97,48 @@
 
       <section class="bicycles">
         <div class="container">
-          <h2>Виды велосипедов</h2>
+          <h2 id="bicycles">Виды велосипедов</h2>
           <ul class="bicycles__list">
             <li class="bicycles__item">
               <figure class="bicycles__pic">
-                <div class="bicycle__pic-wrapper bicycle__pic-wrapper--big-circle">
-                  <img src="img/road-bike-desktop.jpg" alt="Велосипед металлического цвета с корзиной над передним колесом" width="342" height="503">
+                <div class="bicycles__pic-wrapper bicycles__pic-wrapper--big-circle">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/road-bike-mobile.webp 1x, img/road-bike-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/road-bike-tablet.webp 1x, img/road-bike-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/road-bike-desktop.webp 1x, img/road-bike-desktop@2x.webp 2x">
+                    <!-- 1х: 342px; 2x: 684px -->
+                    <img src="img/road-bike-desktop.jpg" srcset="img/road-bike-desktop@2x.jpg 2x" alt="Велосипед металлического цвета с корзиной над передним колесом" width="342" height="503">
+                  </picture>
+                  <h3>Дорожный велосипед</h3>
                 </div>
-                <figcaption class="bicycles__title">Дорожный велосипед</figcaption>
               </figure>
             </li>
             <li class="bicycles__item">
               <figure class="bicycles__pic">
-                <div class="bicycle__pic-wrapper bicycle__pic-wrapper--two-small-squares">
-                  <img src="img/mountain-bike-desktop.jpg" alt="Велосипед на фоне гор" width="342" height="566">
+                <div class="bicycles__pic-wrapper bicycles__pic-wrapper--two-small-squares">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/mountain-bike-mobile.webp 1x, img/mountain-bike-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountain-bike-tablet.webp 1x, img/mountain-bike-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/mountain-bike-desktop.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
+                    <!-- 1х: 342px; 2x: 684px -->
+                    <img src="img/mountain-bike-desktop.jpg" srcset="img/mountain-bike-desktop@2x.jpg 2x" alt="Велосипед на фоне гор" width="342" height="566">
+                  </picture>
+                  <h3>Горный велосипед</h3>
                 </div>
-                <figcaption class="bicycles__title">Горный велосипед</figcaption>
               </figure>
             </li>
             <li class="bicycles__item">
               <figure class="bicycles__pic">
-                <div class="bicycle__pic-wrapper bicycle__pic-wrapper--middle-circle">
-                  <img src="img/children-bicycle-desktop.jpg" alt="Небольшой детский велосипед розового цвета" width="342" height="513">
+                <div class="bicycles__pic-wrapper bicycles__pic-wrapper--middle-circle">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/children-bicycle-mobile.webp 1x, img/children-bicycle-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/children-bicycle-tablet.webp 1x, img/children-bicycle-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/children-bicycle-desktop.webp 1x, img/children-bicycle-desktop@2x.webp 2x">
+                    <!-- 1х: 342px; 2x: 684px -->
+                    <img src="img/children-bicycle-desktop.jpg" srcset="img/children-bicycle-desktop@2x.jpg 2x" alt="Небольшой детский велосипед розового цвета" width="342" height="513">
+                  </picture>
+                  <h3>Детский велосипед</h3>
                 </div>
-                <figcaption class="bicycles__title">Детский велосипед</figcaption>
               </figure>
             </li>
           </ul>
@@ -122,7 +150,13 @@
           <h2 id="video">Видео про велосипеды</h2>
           <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
           <div class="video__preview-wrapper">
-            <img src="img/video-preview-desktop.png" alt="Превью видео про велосипеды" width="929" height="522">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/video-preview-mobile.webp 1x, img/video-preview-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-preview-tablet.webp 1x, img/video-preview-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-preview-desktop.webp 1x, img/video-preview-desktop@2x.webp 2x">
+              <!-- 1х: 929px; 2x: 1858px -->
+              <img src="img/video-preview-desktop.png" srcset="img/video-preview-desktop@2x.png 2x" alt="Превью видео про велосипеды" width="929" height="522">
+            </picture>
             <button class="button" type="button">
               <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 65C50.4493 65 65 50.4493 65 32.5C65 14.5507 50.4493 0 32.5 0C14.5507 0 0 14.5507 0 32.5C0 50.4493 14.5507 65 32.5 65Z" fill="#0AD9C6"></path>
@@ -140,7 +174,13 @@
       <div class="container">
         <h2 id="contacts">Как нас найти?</h2>
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-        <img src="img/map-desktop.png" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <!-- 1х: 957px; 2x: 1914px -->
+          <img src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
+        </picture>
         <ul class="main-footer__contacts-list">
           <li class="main-footer__contact">
             <a class="link" href="mailto:puteshestviemechta@gmail.ru" aria-label="Наш e-mail адрес">
@@ -162,6 +202,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
