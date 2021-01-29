@@ -480,8 +480,6 @@ input[type="radio"].visually-hidden {
   opacity: 0.7; }
   .site-navigation__item a:focus, .site-navigation__item a:hover {
     opacity: 1; }
-  .site-navigation__item a:active {
-    opacity: 0.3; }
   @media (max-width: 1023px) {
     .site-navigation__item a {
       position: relative;
@@ -493,6 +491,8 @@ input[type="radio"].visually-hidden {
       font-size: 20px;
       line-height: 28px;
       opacity: 1; }
+      .site-navigation__item a:focus, .site-navigation__item a:hover {
+        opacity: 0.7; }
       .site-navigation__item a::after {
         position: absolute;
         top: 17px;
@@ -504,6 +504,8 @@ input[type="radio"].visually-hidden {
         background-size: 25px 25px;
         background-position: center center;
         background-repeat: no-repeat; } }
+  .site-navigation__item a:active {
+    opacity: 0.3; }
 
 .main-header__navigation {
   display: -webkit-box;
