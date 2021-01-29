@@ -54,3 +54,17 @@
 .main-header__navigation--nojs .main-header__toggle {
   display: none;
 }
+
+.main-header__navigation--nojs .main-header__site-navigation {
+  position: relative;
+
+  @media (max-width: $width-tablet-only) {
+    left: -14px;
+  }
+
+  @media (max-width: $width-mobile-only) {
+    left: -15px;
+  }
+
+  display: flex;
+}

@@ -93,17 +93,3 @@
     }
   }
 }
-
-.main-header__navigation--nojs .site-navigation {
-  position: relative;
-
-  @media (max-width: $width-tablet-only) {
-    left: -14px;
-  }
-
-  @media (max-width: $width-mobile-only) {
-    left: -15px;
-  }
-
-  display: flex;
-}
