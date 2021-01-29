@@ -601,7 +601,7 @@ input[type="radio"].visually-hidden {
       width: auto; } }
 
 @media (min-width: 1023px) {
-  .promo .container {
+  .promo__container {
     padding: 0; } }
 
 .promo__inner {
@@ -856,7 +856,7 @@ input[type="radio"].visually-hidden {
     .bicycles {
       padding-bottom: 14px; } }
 
-.bicycles .container {
+.bicycles__container {
   max-width: 1267px; }
 
 .bicycles h2 {
