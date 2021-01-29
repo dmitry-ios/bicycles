@@ -730,6 +730,7 @@ input[type="radio"].visually-hidden {
   color: #1c1c1c;
   font-size: 15px;
   line-height: 24px;
+  vertical-align: top;
   background-color: #ffffff;
   border: 1px solid #c9ccd4;
   border-radius: 4px; }
@@ -1106,6 +1107,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   width: 65px;
   height: 65px;
+  vertical-align: top;
   background-color: transparent;
   border: none; }
   @media (max-width: 1023px) {
