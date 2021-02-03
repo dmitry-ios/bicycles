@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var PHONE_CHECK_MSG = 'Введите номер телефона в формате (123) 456 7890';
+  var PHONE_CHECK_MSG = 'Введите номер телефона в формате +xxxxxxxxxxx';
 
   var mainHeader = document.querySelector('.main-header__navigation');
   var siteNavigation = document.querySelector('.site-navigation');
@@ -22,8 +22,9 @@
 
   var checkPhoneValidity = function () {
     var result = true;
+    var regex = /^\+[0-9]{11}$/;
 
-    if (!phoneInput.value.match(/^(?:\([0-9]{3}\)|[0-9]{3})[-\s\.\/]?[0-9]{3}[-\s\.\/]?[0-9]{4}/gm)) {
+    if (!regex.test(phoneInput.value)) {
       result = false;
       phoneInput.setCustomValidity(PHONE_CHECK_MSG);
     } else {
@@ -57,7 +58,16 @@
 
   if (phoneInput) {
     phoneInput.addEventListener('input', function () {
-      checkPhoneValidity();
+      phoneInput.setCustomValidity('');
+      phoneInput.reportValidity();
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', function (evt) {
+      if (!checkPhoneValidity()) {
+        evt.preventDefault();
+      }
     });
   }
 })();
