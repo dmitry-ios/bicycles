@@ -101,7 +101,7 @@
   width: 100%;
 }
 
-.video__preview-wrapper [type="button"] {
+.video__preview-wrapper a {
   position: absolute;
   top: calc(50% - 65px / 2);
   left: calc(50% - 65px / 2);
@@ -109,7 +109,6 @@
   padding: 0;
   width: 65px;
   height: 65px;
-  vertical-align: top;
 
   background-color: transparent;
   border: none;

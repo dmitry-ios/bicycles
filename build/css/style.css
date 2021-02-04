@@ -1114,24 +1114,23 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 100%; }
 
-.video__preview-wrapper [type="button"] {
+.video__preview-wrapper a {
   position: absolute;
   top: calc(50% - 65px / 2);
   left: calc(50% - 65px / 2);
   padding: 0;
   width: 65px;
   height: 65px;
-  vertical-align: top;
   background-color: transparent;
   border: none; }
   @media (max-width: 1023px) {
-    .video__preview-wrapper [type="button"] {
+    .video__preview-wrapper a {
       top: calc(50% - 90px / 2);
       left: calc(50% - 90px / 2);
       width: 90px;
       height: 90px; } }
   @media (max-width: 767px) {
-    .video__preview-wrapper [type="button"] {
+    .video__preview-wrapper a {
       top: calc(50% - 65px / 2);
       left: calc(50% - 65px / 2);
       width: 65px;
