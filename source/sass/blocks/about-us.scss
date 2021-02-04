@@ -18,6 +18,14 @@
   }
 }
 
+.about-us__container {
+  max-width: 1300px;
+
+  @media (min-width: $width-tablet-only) {
+    padding: 0 72px;
+  }
+}
+
 .about-us h2 {
   margin: 0;
   padding-top: 153px;
@@ -37,7 +45,7 @@
 }
 
 .about-us__facts-list {
-  margin: 0 -11px;
+  margin: 0;
   margin-top: 42px;
   padding: 0;
   display: flex;
