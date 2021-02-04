@@ -596,8 +596,9 @@ input[type="radio"].visually-hidden {
       margin: 0;
       padding-top: 21px;
       padding-left: 7px; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .logo {
+      margin-left: 0;
       padding-left: 0; } }
 
 .logo svg {

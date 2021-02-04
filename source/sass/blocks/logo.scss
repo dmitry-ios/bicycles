@@ -15,7 +15,8 @@
     padding-left: 7px;
   }
 
-  @media (max-width: $width-tablet-only) {
+  @media (max-width: $width-mobile-only) {
+    margin-left: 0;
     padding-left: 0;
   }
 }
