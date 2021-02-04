@@ -18,13 +18,17 @@
 
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     padding: 0;
     padding-top: 100px;
     padding-bottom: 135px;
     width: 100vw;
+    height: 100vh;
 
     border: none;
     background-color: $basic-white-color;
+    overflow-y: auto;
 
     &--close {
       display: none;

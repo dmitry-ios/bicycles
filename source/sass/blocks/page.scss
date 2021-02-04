@@ -10,6 +10,12 @@
   grid-template-rows: min-content 1fr min-content;
 
   overflow-x: hidden;
+
+  &--fullscreen {
+    @media (max-width: $width-tablet-only) {
+      overflow-y: hidden;
+    }
+  }
 }
 
 .page__body::before {

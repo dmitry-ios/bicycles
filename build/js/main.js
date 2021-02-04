@@ -11,11 +11,13 @@
   var phoneInput = form && form.querySelector('[name=phone]');
 
   var closeMenu = function () {
+    document.body.classList.remove('page__body--fullscreen');
     siteNavigation.classList.add('site-navigation--close');
     menuToggle.classList.add('main-header__toggle--open');
   };
 
   var openMenu = function () {
+    document.body.classList.add('page__body--fullscreen');
     siteNavigation.classList.remove('site-navigation--close');
     menuToggle.classList.remove('main-header__toggle--open');
   };

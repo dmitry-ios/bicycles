@@ -60,10 +60,16 @@
 
   @media (max-width: $width-tablet-only) {
     left: -14px;
+
+    margin: 0;
+    width: calc(100% + 2 * 14px);
+    height: auto;
   }
 
   @media (max-width: $width-mobile-only) {
     left: -15px;
+
+    width: calc(100% + 2 * 15px);
   }
 
   display: flex;
